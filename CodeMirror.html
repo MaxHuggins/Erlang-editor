@@ -2,15 +2,18 @@
 <html>
 <body>
 	<textarea rows="20" cols="30" id="myTextArea">
+		test text
 		(document.body, {
 			value: "function myScript(){return 100;}\n",
 			mode: "javascript"
 		});
 	</textarea>
-	<link rel="stylesheet" href="lib/codemirror.css">
 	<script src="lib/codemirror.js"></script>
+	<link rel="stylesheet" href="lib/codemirror.css">
+	<script src="mode/javascript/javascript.js"></script>
 	<script>
-		var CMeditor = CodeMirror.fromTextArea(myTextArea);
+		var CMeditor = CodeMirror.fromTextArea(myTextArea, { 
+			lineNumbers: true});
 		
 	</script>	
 </body>
