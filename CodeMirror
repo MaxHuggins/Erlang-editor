@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<textarea rows="20" cols="30" id="myTextArea">
+		(document.body, {
+			value: "function myScript(){return 100;}\n",
+			mode: "javascript"
+		});
+	</textarea>
+	<link rel="stylesheet" href="lib/codemirror.css">
+	<script src="lib/codemirror.js"></script>
+	<script>
+		var CMeditor = CodeMirror.fromTextArea(myTextArea);
+		
+	</script>	
+</body>
+</html>
