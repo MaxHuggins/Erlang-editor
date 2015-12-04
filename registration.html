@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<title>Registration</title>
+	<script>
+		function validate(){
+			var pw1 = document.forms["registration"]["password"].value;
+			var pw2 = document.forms["registration"]["password2"].value;
+			
+			if(pw1 != pw2){
+				alert("Passwords do not match!");
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form name="registration" action="text.html" onsubmit="return validate()" method="post">
+		<h3>
+		First Name: <input type="text" id="firstName" name="firstName" required autofocus/> </br>
+		Last Name: <input type="text" name="lastName" required/> <br>
+		Username: <input type="text" name="username" required/> <br>
+		Password: <input type="password" name="password" required/> 
+		Re-type Password: <input type="password" name="password2" required/> </br>
+		E-Mail: <input type="text" name="email"/> </br>
+		University: <input type="text" name="university"/>
+		Year: <select name="year">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+		</select> </br>
+		<input type="submit" value="Register">
+		<h3>
+	</form>
+</body>
+</html>
